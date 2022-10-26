@@ -8,7 +8,7 @@ import * as yup from "yup";
 function AddStudents(props) {
   let navigate = useNavigate();
 
-  const url = "https://61ee1f7ed593d20017dbac50.mockapi.io/students/";
+  const url = "https://6358e302c27556d28945e202.mockapi.io/students/";
 
   //using axios
   let handleSubmit = async (values) => {

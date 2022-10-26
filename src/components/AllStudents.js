@@ -3,7 +3,7 @@ import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import axios from "axios";
-const url = "https://61ee1f7ed593d20017dbac50.mockapi.io/students/";
+const url = "https://6358e302c27556d28945e202.mockapi.io/students/";
 function AllStudents() {
   let [students, setStudents] = useState([]);
 
@@ -11,17 +11,6 @@ function AllStudents() {
     getData();
   }, []);
 
-  //Using fetch
-  //   let getData = async()=>{
-  //     await fetch(url)
-  //     .then(response => response.json())
-  //     .then(res=>{
-  //       setStudents(res)
-  //     })
-  //     .catch(err=>{
-  //       console.log(err)
-  //     })
-  //   }
 
   // get using axios
   let getData = async () => {
@@ -32,19 +21,6 @@ function AllStudents() {
       console.log(error);
     }
   };
-
-  //using fetch
-  // let handleDelete = async(i)=>{
-  //     await fetch(url+i,{
-  //         method:'DELETE'
-  //     })
-  //     .then(response=>response.json())
-  //     .then(data=>{
-  //         getData()
-  //     })
-  // }
-
-  //delete using axios
 
   let handleDelete = async (i) => {
     try {
@@ -84,9 +60,6 @@ function AllStudents() {
                   <Link to={`/edit-student/${e.id}`}>
                     <Button variant="primary">Edit</Button>
                   </Link>
-                  {/* <Button variant='primary' onClick={()=>{
-                                            navigate('/edit-student/'+i)
-                                        }}>Edit</Button> */}
                 </td>
               </tr>
             );
