@@ -20,7 +20,7 @@ function EditStudent(props) {
     } else {
       alert("Selected Students is Not available");
     }
-  });
+  },[]);
 
   let getData = () => {
     setName(context.students[params.id].name);
