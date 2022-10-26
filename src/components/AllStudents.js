@@ -11,19 +11,6 @@ function AllStudents() {
         getData();
       },[])
 
-
-    //Using fetch
-    //   let getData = async()=>{
-    //     await fetch(url)
-    //     .then(response => response.json())
-    //     .then(res=>{
-    //       setStudents(res)
-    //     })
-    //     .catch(err=>{
-    //       console.log(err)
-    //     })
-    //   }
-
     // get using axios
     let getData = async()=>{
         try {
@@ -33,17 +20,6 @@ function AllStudents() {
             console.log(error)
         }
     }
-
-    //using fetch
-    // let handleDelete = async(i)=>{
-    //     await fetch(url+i,{
-    //         method:'DELETE'
-    //     })
-    //     .then(response=>response.json())
-    //     .then(data=>{
-    //         getData()
-    //     })
-    // }
 
 
     //delete using axios
@@ -85,9 +61,6 @@ function AllStudents() {
                                         <Link to={`/edit-student/${e.id}`}>
                                         <Button variant='primary'>Edit</Button>
                                         </Link>
-                                        {/* <Button variant='primary' onClick={()=>{
-                                            navigate('/edit-student/'+i)
-                                        }}>Edit</Button> */}
                                     </td>
                                 </tr>
                     })

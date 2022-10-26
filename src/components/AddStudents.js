@@ -3,11 +3,9 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import {useNavigate} from 'react-router-dom';
 import axios from 'axios'
-// import {StudentContext} from '../App'
+
 
 function AddStudents(props) {
-
-    // let context = useContext(StudentContext)
 
     let navigate = useNavigate();
     let [name,setName]=useState("");
@@ -15,31 +13,6 @@ function AddStudents(props) {
     let [mobile,setMobile]=useState("");
     let [cls,setCls]=useState("");
     const url = "https://6358e302c27556d28945e202.mockapi.io/students/"
-
-    //Using fetch
-    // let handleSubmit = async()=>{
-    //     await fetch(url,{
-    //         method:'POST',
-    //         headers:{
-    //             'Content-Type':'application/json'
-    //         },
-    //         body:JSON.stringify({
-    //             name,
-    //             email,
-    //             mobile,
-    //             class:cls
-    //         })
-    //     })
-    //     .then(response=>response.json())
-    //     .then(res=>{
-    //         navigate("/all-students")
-    //     })
-    //     .catch(err=>{
-    //         console.log(err)
-    //     })
-
-    // }
-
 
     //using axios
     let handleSubmit = async()=>{

@@ -1,33 +1,18 @@
-import React,{useEffect, useState,useRef} from 'react';
+import React, { useEffect, useState, useRef } from "react";
 
 function Hooks() {
-  // let [name,setName]=useState("")
-  // const renderCount=useRef(0)
+  let [a, setA] = useState("");
+  let inputRef = useRef();
 
-  // useEffect(()=>{
-  //     renderCount.current += 1
-  // })
+  useEffect(() => {
+    inputRef.current.focus();
+  });
 
-  let [a,setA] = useState("");
-  let inputRef = useRef()
-
-
-  useEffect(()=>{
-    inputRef.current.focus()
-  },)
-
-  return <>
-    {/* <input value={name} onChange={(e)=>setName(e.target.value)}/>
-    <div>My Name is {name} </div>
-    <div> I rendered {renderCount.current} times</div> */}
-
-    <input value={a} ref={inputRef} onChange={(e)=>setA(e.target.value)}/>
-
-    {/* <button onClick={focus}>Focus </button> */}
-
-
-
-  </>
+  return (
+    <>
+      <input value={a} ref={inputRef} onChange={(e) => setA(e.target.value)} />
+    </>
+  );
 }
 
 export default Hooks;
